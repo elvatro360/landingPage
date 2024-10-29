@@ -5,7 +5,7 @@
     <title>{% block title %} Landing page {% endblock %} </title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" id="theme-link">
     <script src="{% static 'js/theme.js' %}" defer></script>
-    <button onclick="toggleTheme()">Cambiar Tema</button>
+    
 </head>
 
 <body>
@@ -15,11 +15,21 @@
                 <a href="/">home</a>
             </li>
             <li>
-                <a href="{% url 'legal' %}">Legal</a>
+                
             </li>
             <li>
                 <a href="{% url 'about' %}">About</a>
             </li>
+            <li>
+                <a href="{% url 'contacto' %}">Contacto</a>
+            </li>
+            <li>
+                <a href="{% url 'legal' %}">Legal</a>
+            </li>
+            <li>
+                <button onclick="toggleTheme()">Día / Noche</button>
+            </li>
+            
         </ul>
     </nav>
 
