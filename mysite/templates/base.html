@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>{% block title %} Landing page {% endblock %} </title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" id="theme-link">
+    <script src="{% static 'js/theme.js' %}" defer></script>
+    <button onclick="toggleTheme()">Cambiar Tema</button>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="/">home</a>
+            </li>
+            <li>
+                <a href="{% url 'legal' %}">Legal</a>
+            </li>
+            <li>
+                <a href="{% url 'about' %}">About</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="container">
+    {% block content %}{% endblock %}
+    </main>
+    <!-- Tu contenido aquí -->
+    <footer>
+        <section id="support">
+            <h2>Soporte</h2>
+            <p>¿Necesitas ayuda? Nuestro equipo de soporte está aquí para asistirte las 24 horas del día.</p>
+            <div class="contact-buttons">
+                <a href="mailto:soporte@example.com"><button>Email</button></a>
+                <a href="tel:+123456789"><button>Llámanos</button></a>
+            </div>
+        </section>
+        <section id="social">
+            <h2>Síguenos</h2>
+            <p>¡Mantente conectado y sigue nuestras actualizaciones en redes sociales!</p>
+            <div class="social-icons">
+                <a href="https://facebook.com/tu_pagina" target="_blank"><img src="{% static 'img/facebook.png' %}" alt="Facebook"></a>
+                <a href="https://twitter.com/tu_pagina" target="_blank"><img src="{% static 'img/twitter.png' %}" alt="Twitter"></a>
+                <a href="https://instagram.com/tu_pagina" target="_blank"><img src="{% static 'img/instagram.png' %}" alt="Instagram"></a>
+            </div>
+        </section>
+        
+    </footer>
+
+</body>
+</html>
