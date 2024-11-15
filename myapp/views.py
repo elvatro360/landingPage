@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .forms import ContactForm
+from myapp.forms import ContactForm
 from .models import ContactMessage
 
 def hello_world(request):
