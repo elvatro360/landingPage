@@ -4,18 +4,15 @@
 <head>
     <title>{% block title %} Landing page {% endblock %} </title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" id="theme-link">
-    <script src="{% static 'js/theme.js' %}" defer></script>
-    
+    <script src="{% static 'js/theme.js' %}" defer></script>    
 </head>
-
 <body>
     <nav>
         <ul>
             <li>
                 <a href="/">home</a>
             </li>
-            <li>
-                
+            <li>         
             </li>
             <li>
                 <a href="{% url 'about' %}">About</a>
@@ -29,10 +26,8 @@
             <li>
                 <button onclick="toggleTheme()">Día / Noche</button>
             </li>
-            
         </ul>
     </nav>
-
     <main class="container">
     {% block content %}{% endblock %}
     </main>
@@ -55,8 +50,6 @@
                 <a href="https://instagram.com/tu_pagina" target="_blank"><img src="{% static 'img/instagram.png' %}" alt="Instagram"></a>
             </div>
         </section>
-        
     </footer>
-
 </body>
 </html>
